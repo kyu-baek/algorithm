@@ -19,10 +19,10 @@ int visited[n];
 void go(int f) {
   visited[f] = 1;
   cout << f << '\n';
-  // for (int i = 0; i < n; i++) {
-  //   if (visited[i]) continue;
-  //   if (v[f][i]) go(i);
-  // }
+  for (int i = 0; i < n; i++) {
+    if (visited[i]) continue;
+    if (v[f][i]) go(i);
+  }
 }
 
 int main() {
